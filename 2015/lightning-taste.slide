@@ -2,9 +2,14 @@ Go: Batteries Included
 April 14, 2015
 
 Mike Cochran
-mcochran@linux.com
+@vongrippen
 
-A short version of Robert Griesemer's Taste of Go
+
+* Attribution
+
+This talk is derived from Robert Griesemer's A Taste of Go talk found at
+
+.link http://talks.golang.org talks.golang.org
 
 
 * The Go programming language
