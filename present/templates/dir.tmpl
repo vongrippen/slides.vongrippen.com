@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Presentations</title>
+  <link type="text/css" rel="stylesheet" href="/static/dir.css">
+  <script src="/static/dir.js"></script>
+</head>
+<body>
+
+<div id="topbar"><div class="container">
+
+<form method="GET" action="">
+<div id="heading"><a href="/">Presentations</a></div>
+</form>
+
+</div></div>
+
+<div id="page">
+
+  <h1>Talks</h1>
+
+  {{with .Path}}<h2>{{.}}</h2>{{end}}
+
+  {{with .Articles}}
+  <h4>Articles:</h4>
+  <dl>
+  {{range .}}
+  <dd><a href="/{{.Path}}">{{.Name}}</a>: {{.Title}}</dd>
+  {{end}}
+  </dl>
+  {{end}}
+
+  {{with .Slides}}
+  <h4>Slide decks:</h4>
+  <dl>
+  {{range .}}
+  <dd><a href="/{{.Path}}">{{.Name}}</a>: {{.Title}}</dd>
+  {{end}}
+  </dl>
+  {{end}}
+
+  {{with .Other}}
+  <h4>Files:</h4>
+  <dl>
+  {{range .}}
+  <dd><a href="/{{.Path}}">{{.Name}}</a></dd>
+  {{end}}
+  </dl>
+  {{end}}
+
+  {{with .Dirs}}
+  <h4>Sub-directories:</h4>
+  <dl>
+  {{range .}}
+  <dd><a href="/{{.Path}}">{{.Name}}</a></dd>
+  {{end}}
+  </dl>
+  {{end}}
+
+</div>
+
+<div id="footer">
+Except as noted,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://golang.org/LICENSE">BSD license</a>.<br>
+</div>
+
+</body>
+</html>
