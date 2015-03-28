@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-PATH=~/go/bin:$PATH
-GOROOT=~/.go
-GOPATH=~/.gopath
+export GOROOT=~/.go
+export GOPATH=~/.gopath
+export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 go get golang.org/x/tools/cmd/present
 present -base .html/ -http "0.0.0.0:$PORT" -orighost "slides.vongrippen.com"
