@@ -26,7 +26,7 @@ This talk is derived from Robert Griesemer's A Taste of Go talk found at
 
 * Hello, World!
 
-.play taste/hello.go
+.play batteries-included/hello.go
 
 # Unicode
 # Programs are organized in packages
@@ -37,7 +37,7 @@ This talk is derived from Robert Griesemer's A Taste of Go talk found at
 
 * Hello, World! Internet-style
 
-.play taste/hellohttp.go
+.play batteries-included/hellohttp.go
 
 
 * Basic go
@@ -205,39 +205,39 @@ Common map operations:
 
 Calling walkStdLib with a closure:
 
-.code taste/walk.go /example START/,/example END/
+.code batteries-included/walk.go /example START/,/example END/
 
 More directly:
 
-.play taste/walk.go /main START/,/main END/
+.play batteries-included/walk.go /main START/,/main END/
 
 
 * Methods
 
 Methods are functions with a _receiver_ parameter:
 
-.code taste/point.go /String START/,/String END/
+.code batteries-included/point.go /String START/,/String END/
 
 The receiver binds the method to its _base_type_ (Point):
 
-.code taste/point.go /Point START/,/Point END/
+.code batteries-included/point.go /Point START/,/Point END/
 
 Methods are invoked via the usual dot notation:
 
-.play taste/point.go /main START/,/main END/
+.play batteries-included/point.go /main START/,/main END/
 
 
 * Methods can be defined for any user-defined type!
 
 For the Weekday type:
 
-.code taste/weekday.go /type START/,/type END/
+.code batteries-included/weekday.go /type START/,/type END/
 
 Define String method on Weekday:
 
-.code taste/weekday.go /String START/,/String END/
+.code batteries-included/weekday.go /String START/,/String END/
 
-.play taste/weekday.go /main START/,/main END/
+.play batteries-included/weekday.go /main START/,/main END/
 
 Method calls via non-interface types are statically dispatched.
 
@@ -264,12 +264,12 @@ Examples:
 
 * Using interfaces
 
-.code taste/stringer.go /Stringer START/,/Stringer END/
+.code batteries-included/stringer.go /Stringer START/,/Stringer END/
 
 Both Weekday and Point define a String method, so values of both can be assigned to
 a variable of Stringer type:
 
-.play taste/stringer.go /main START/,/main END/
+.play batteries-included/stringer.go /main START/,/main END/
 
 Method calls via interface types are dynamically dispatched ("virtual function call").
 
@@ -288,11 +288,11 @@ Method calls via interface types are dynamically dispatched ("virtual function c
 
 * A simple example
 
-.code taste/concurrency1.go /f START/,/f END/
+.code batteries-included/concurrency1.go /f START/,/f END/
 
 Function f is launched as 3 different goroutines, all running concurrently:
 
-.play taste/concurrency1.go /main START/,/main END/
+.play batteries-included/concurrency1.go /main START/,/main END/
 
 
 * Communication via channels
@@ -319,14 +319,19 @@ Channel operations synchronize the communicating goroutines.
 
 Each goroutine sends its results via channel ch:
 
-.code taste/concurrency2.go /f START/,/f END/
+.code batteries-included/concurrency2.go /f START/,/f END/
 
 The main goroutine receives (and prints) all results from the same channel:
 
-.play taste/concurrency2.go /main START/,/main END/
+.play batteries-included/concurrency2.go /main START/,/main END/
 
 
 * There's a lot more!
+
+- Great community
+
+.link http://meetups.memphistechnology.org/gopher
+.link irc://irc.freenode.org/go-nuts #go-nuts
 
 - Extensive standard library
 
